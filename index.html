@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cursor and Header Fix</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh;
+      color: #4a4a4a;
+      background-color: #fafafa;
+      cursor: none; /* Hide the default cursor */
+    }
+
+    /* Sidebar styling */
+    aside {
+      background-color: #242424;
+      color: rgb(255, 255, 255);
+      width: 20%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    aside h1 {
+      font-size: 4em; /* Adjusted font size */
+      margin: 0 0 20px;
+      line-height: 1.2; /* Adjusted line height */
+    }
+
+    aside nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside nav ul li {
+      margin-bottom: 15px;
+    }
+
+    aside nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    aside footer {
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    /* Main content styling */
+    main {
+      width: 75%;
+      margin-left: 5%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    main section {
+      margin-bottom: 40px;
+    }
+
+    main h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    main p,
+    main ul {
+      line-height: 1.6;
+      color: #4a4a4a;
+    }
+
+    main ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom cursor styling */
+    .custom-cursor {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease-out, background-color 0.2s ease;
+      z-index: 1000;
+    }
+
+    .custom-cursor.active {
+      background-color: rgba(255, 255, 255, 1);
+      transform: scale(2);
+    }
+
+    /* Blur overlay styling */
+    .blur-overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      backdrop-filter: blur(0.5px);
+      clip-path: circle(10px at 0 0);
+      transition: clip-path 0.1s ease-out;
+      z-index: 999;
+    }
+
+    h2, p, ul, li {
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <h1>Quinn Liu</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#passions">Passions</a></li>
+        <li><a href="#dreams">Dreams</a></li>
+        <li><a href="#north-star">My North Star</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <p>© 2024 Quinn Liu</p>
+    </footer>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm Quinn. I am passionate about using frontier technologies to solve real, industry problems.</p>
+      <p>I can help with two things:</p>
+      <ul>
+        <li>Affordable and tailored supply chain (e.g., I helped BrainCo make robotics classrooms)</li>
+        <li>Legal (tri-qualified in NYC, Australia, and Hong Kong)</li>
+      </ul>
+      <p>I have formed private equity funds, raised capital, litigated, and facilitated company listings and mergers. Holding a double degree in Fine Arts and Law, I apply legal and design thinking in scaling, operating, and investing.</p>
+      <p>Based in San Francisco, California, I spend most of my time thinking about Nabu, scaling ventures, and good coffee.</p>
+    </section>
+
+    <section id="passions">
+      <h2>Passions</h2>
+      <ul>
+        <li>Making legal and government services accessible and equitable</li>
+        <li>Contributing to self-supervised learning or fine-tuning models for domain expertise</li>
+        <li>Eliminating inefficiencies in enterprises through AI-powered ERPs, CRMs, or HRIS; utilizing LLMs for manual back-office processes</li>
+      </ul>
+    </section>
+
+    <section id="dreams">
+      <h2>Dreams</h2>
+      <ul>
+        <li>Building a new way of work</li>
+        <li>Empowering 10 women to build 10 things that shape our future</li>
+        <li>Starting a fund to invest in AGI that changes the way we work forever</li>
+      </ul>
+    </section>
+
+    <section id="north-star">
+      <h2>My North Star</h2>
+      <p>Impact, belonging, and growth.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:quinn.liu.work@gmail.com">quinn.liu.work@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/huanxu-quinn-liu/" target="_blank">https://www.linkedin.com/in/huanxu-quinn-liu/</a></p>
+      <p>Twitter: <a href="https://x.com/quinnliuhx" target="_blank">https://x.com/quinnliuhx</a></p>
+    </section>
+  </main>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="blur-overlay"></div>
+
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    const blurOverlay = document.querySelector('.blur-overlay');
+
+    // Update cursor position on mouse move
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+
+      // Update blur overlay position
+      blurOverlay.style.clipPath = `circle(10px at ${e.clientX}px ${e.clientY}px)`;
+    });
+
+    // Add active state on hover for links
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('mouseover', () => {
+        cursor.classList.add('active');
+        blurOverlay.style.clipPath = `circle(20px at ${cursor.style.left} ${cursor.style.top})`;
+      });
+      link.addEventListener('mouseout', () => {
+        cursor.classList.remove('active');
+        blurOverlay.style.clipPath = `circle(10px at ${cursor.style.left} ${cursor.style.top})`;
+      });
+    });
+  </script>
+</body>
+</html>

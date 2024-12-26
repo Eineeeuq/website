@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #f8ce0f;
+  color: rgb(255, 255, 255);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Section Styles */
+section {
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+section h2 {
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f8ce0f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+@media (max-width: 600px) {
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  /* Hide the default browser cursor */
+body {
+    cursor: none;
+  }
+  
+  /* Custom circular cursor */
+  .custom-cursor {
+    width: 20px; /* Adjust size */
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    position: fixed;
+    pointer-events: none; /* Prevent interaction issues */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, background-color 0.2s ease;
+    z-index: 1000;
+  }
+  
+  /* Active state for links or clickable elements */
+  .custom-cursor.active {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque */
+    transform: scale(1.5); /* Enlarge cursor */
+  }
+  .blur {
+    filter: blur(5px); /* Adjust the blur intensity */
+    transition: filter 0.2s ease; /* Smooth transition */
+  }
