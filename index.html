@@ -7,7 +7,7 @@
   <style>
     /* General body styling */
     body {
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -19,49 +19,55 @@
 
     /* Sidebar styling */
     aside {
-      background-color: #242424;
-      color: rgb(255, 255, 255);
-      width: 20%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-sizing: border-box;
-    }
+  position: fixed; /* Fix the sidebar to the viewport */
+  top: 0;
+  left: 0;
+  width: 20%; /* Sidebar width */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #131313;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure it sits above the main content */
+}
 
-    aside h1 {
-      font-size: 5vw; /* Responsive font size */
-      margin: 0;
-      line-height: 1;
-      word-break: break-word;
-      text-align: left;
-    }
+aside h1 {
+  font-size: 2em; /* Adjust font size for a better fit */
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: left;
+}
 
-    aside nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+aside nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-    aside nav ul li {
-      margin-bottom: 15px;
-    }
+aside nav ul li {
+  margin-bottom: 15px;
+}
 
-    aside nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.1em;
-    }
+aside nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+}
 
-    aside footer {
-      font-size: 0.9em;
-      text-align: center;
-    }
+aside footer {
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: auto;
+}
 
     /* Main content styling */
     main {
       width: 75%;
-      margin-left: 5%;
+      margin-left: 20%;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -78,7 +84,7 @@
 
     main p,
     main ul {
-      line-height: 1.6;
+      line-height: 1.5;
       color: #4a4a4a;
     }
 
@@ -122,7 +128,7 @@
       top: 0;
       left: 0;
       pointer-events: none;
-      backdrop-filter: blur(0.5px);
+      backdrop-filter: blur(1px);
       clip-path: circle(10px at 0 0);
       transition: clip-path 0.1s ease-out;
       z-index: 999;
@@ -131,6 +137,25 @@
     h2, p, ul, li {
       margin: 20px;
     }
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Quinn Liu">
+  <meta property="og:description" content="Here's my website. Get to know me!">
+  <meta property="og:image" content="https://eineeeuq.github.io/website/preview-image.png">
+  <meta property="og:url" content="https://eineeeuq.github.io/website/">
+  <meta property="og:type" content="website">
+
+  <!-- Fallback for Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quinn Liu">
+  <meta name="twitter:description" content="WHere's my website. Get to know me!">
+  <meta name="twitter:image" content="https://eineeeuq.github.io/website/preview-image.png">
+    
+
+    
   </style>
 </head>
 <body>
@@ -143,6 +168,7 @@
         <li><a href="#passions">Passions</a></li>
         <li><a href="#dreams">Dreams</a></li>
         <li><a href="#north-star">My North Star</a></li>
+        <li><a href="#why-i-moved">Why I Moved</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -186,6 +212,42 @@
     <section id="north-star">
       <h2>My North Star</h2>
       <p>Impact, belonging, and growth.</p>
+    </section>
+
+    <section id="why-i-moved">
+    <h2>Why I Moved</h2>
+    <p>I landed at Hong Kong International Airport at 5 a.m., lugging five jars of peanut butter, a rice cooker, a coffee machine, a sleeping bag, and five suitcases packed with things I thought I’d desperately need. Looking back, I have no idea why my 22-year-old brain thought those items would be hard to find in Hong Kong. But there I was—young, excited, and ridiculously overprepared, ready to start a new chapter in a city that felt like the center of the world.
+<p>Julie, my law school friend and soon-to-be roommate, picked me up, and within hours we were at IKEA. By the end of that exhausting first day, we had managed to get some secondhand furniture and basic essentials, but we still ended up sleeping on the floor for two weeks. Apparently, you needed a local phone number to pre-order furniture, and we hadn’t sorted that out yet. Despite the chaos, I was buzzing with excitement. This was it. I was in Hong Kong. I’d make partner at a top law firm, build a life here, and maybe, someday, move to New York to become a big-shot lawyer. It felt like I had a roadmap for my entire life.</p>
+<p>Hong Kong felt like the perfect place for me. Coming from Sydney, I was tired of feeling like an exception—the “Asian girl” in predominantly white spaces. In Hong Kong, there was no bamboo ceiling, no glass ceiling. It was refreshing to be just one of many ambitious, driven women. For the first time, I felt like I belonged somewhere.</p>
+
+<p>I threw myself into building a life. My first apartment was in a quiet neighborhood by the sea—far from the hustle and chaos of Central. It reminded me of Sydney: the breeze, the ocean, the families raising kids. I filled it with Taobao treasures, soft carpets, and little decorations that made it feel like home. I even got a cat. Life was good. I thought I’d stay forever.
+
+<p> Then I moved to Central. My new apartment was sleek and modern, with a balcony overlooking the city. It was everything I thought I wanted—a short commute to work, a buzzing social scene, and constant energy. I had so many friends. Too many, honestly. I was always surrounded by people: 40 of us crammed into an apartment celebrating a birthday, a housewarming, a promotion, or someone’s admission to practice law. My calendar was always full, my life looked enviable from the outside, but inside? I felt empty. Lonely, even. I couldn’t put my finger on why.
+
+ <p>I poured myself into travel, hoping it would fill the void. Over two years, I visited more than 20 countries. From breathtaking landscapes to bustling cities, I tried to lose myself in new experiences. But as privileged as this sounds, even that didn’t help. The hollow feeling was still there. I was chasing something, but I didn’t know what.
+
+ <p>Work wasn’t helping either. I had picked funds formation—a niche area of law—because it gave me the mobility to work anywhere in the world. It was practical. I even passed the New York Bar while working full-time, studying during stolen hours between midnight and dawn. I’d stay up from 12 a.m. to 5 a.m., study until my brain felt fried, then head to work, catch a few hours of sleep, and repeat. It was exhausting, but I thought it was worth it. I had convinced myself that New York was the next logical step.
+
+<p>But as time went on, I started to realize I didn’t care about the things I was supposed to care about. My colleagues were brilliant, hardworking, and detail-oriented—everything I thought I admired. But I couldn’t bring myself to care about perfect formatting, the debate between “keep track of” and “keep track with,” or reading the same fee proposal five times. The work felt transactional and detached. I wanted to create something meaningful, but I didn’t know how to make that happen.
+
+<p>After four years, I decided to leave Hong Kong and move to San Francisco. This time, the move felt different. When I landed in Hong Kong, I thought it was where I belonged. When I arrived in San Francisco, I knew it was.</p>
+<p>San Francisco has a way of humbling you. It’s a city full of people who don’t just think outside the box—they shatter it entirely. I thrive here because I love being the dumbest person in the room. Every conversation challenges me to think bigger, learn more, and grow faster. It’s terrifying, exhilarating, and exactly what I needed.</p>
+<p>Moving across three continents in five years taught me a lot—about life, about people, and about myself.</p>
+<p>What I’ve Learned</p>
+    <ul>
+<li>Only change and yourself are permanent. Everything else is fleeting.
+    Each city left its mark on me, but none stayed the same. Neither did I. The peanut-butter-loving 22-year-old who landed in Hong Kong isn’t the same person writing this today. I’ve learned to let go and embrace the impermanence of life.
+</li>
+<li>Life is an accumulation of choices. You can always choose.
+    Moving to Hong Kong was a choice. Staying was a choice. Leaving was, too. Even when I felt stuck, I reminded myself that every day, I was making choices—whether I realized it or not. That realization was liberating.
+</li>
+<li>Belonging isn’t about a place—it’s about a purpose. In Hong Kong, I searched for belonging in my heritage, my career, and my surroundings. In San Francisco, I learned that belonging comes from being aligned with your purpose and being unapologetically yourself.
+</li>
+<li>Success is fluid. Define it on your own terms. For years, I believed success meant titles, salary, and recognition. But San Francisco showed me that success is about growth, impact, and joy.
+</li>
+    </ul>
+    <p>Looking back, my journey wasn’t just about moving from Sydney to Hong Kong to San Francisco. It was about becoming. Each move was a shedding of one version of myself and the beginning of another. It wasn’t always easy. I doubted myself, stumbled, and grieved the lives I left behind. But every step brought me closer to the person I am today: someone who values adventure over certainty, purpose over prestige, and growth over comfort.</p>
+ <p>I don’t know where I’ll go next. Maybe back to Sydney, maybe somewhere completely new. Or maybe I’ll finally put down roots. But wherever I end up, I’ll carry these lessons with me. And I’ll keep choosing, keep growing, and keep chasing that elusive, exhilarating feeling of belonging—not to a place, but to myself.</p>
     </section>
 
     <section id="contact">
