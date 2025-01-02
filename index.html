@@ -65,9 +65,12 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1.5 em;
+      text-align: left; /* Align text to the left */
+      justify-content: flex-start;
       font-weight: bold;
       margin-bottom: 10px; /* Add spacing below the header */
       color: #4a4a4a; 
+      gap: 20px;
     }
 
     .dropdown-header:hover {
@@ -76,7 +79,8 @@
 
     .dropdown-content {
       display: none;
-      padding: 15px 0;
+      padding: 5px 0;
+      Margin-left: 35px;
       border-top: transparent;
       background-color: transparent;
     }
@@ -160,8 +164,9 @@
 
   <div class="dropdown">
     <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span class="icon">►</span>
       <span>Why I Moved ✈️</span>
-      <span class="icon">↵</span>
+      
     </div>
     <div class="dropdown-content">
 
@@ -204,8 +209,8 @@
 
   <div class="dropdown">
     <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span class="icon">►</span>
       <span>Purpose 📍</span>
-      <span class="icon">↵</span>
     </div>
     <div class="dropdown-content">
       <!-- Content for "Purpose" -->
@@ -217,8 +222,8 @@
 
   <div class="dropdown">
     <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span class="icon">►</span>
       <span>Favourite Books 📚</span>
-      <span class="icon">↵</span>
     </div>
     <div class="dropdown-content">
       <!-- Content for "Favourite Books" -->
