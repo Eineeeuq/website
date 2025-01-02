@@ -9,101 +9,17 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       display: flex;
       min-height: 100vh;
       color: #4a4a4a;
       background-color: #fafafa;
-      cursor: none; /* Hide the default cursor */
+      margin-bottom: 100px;
+      cursor: none;
     }
 
-    /* Sidebar styling */
-    aside {
-  position: fixed; /* Fix the sidebar to the viewport */
-  top: 0;
-  left: 0;
-  width: 20%; /* Sidebar width */
-  height: 100vh; /* Full height of the viewport */
-  background-color: #131313;
-  color: rgb(255, 255, 255);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  z-index: 1000; /* Ensure it sits above the main content */
-}
-
-aside h1 {
-  font-size: 2em; /* Adjust font size for a better fit */
-  margin: 0 0 20px 0;
-  line-height: 1.2;
-  word-break: break-word;
-  text-align: left;
-}
-
-aside nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-aside nav ul li {
-  margin-bottom: 15px;
-}
-
-aside nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1em;
-}
-
-aside footer {
-  font-size: 0.9em;
-  text-align: center;
-  margin-top: auto;
-}
-
-    /* Main content styling */
-    main {
-      width: 75%;
-      margin-left: 20%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    main section {
-      margin-bottom: 40px;
-    }
-
-    main h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    main p,
-    main ul {
-      line-height: 1.5;
-      color: #4a4a4a;
-    }
-
-    main ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Custom cursor styling */
-    .custom-cursor {
+       /* Custom cursor styling */
+       .custom-cursor {
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -134,42 +50,82 @@ aside footer {
       z-index: 999;
     }
 
-    h2, p, ul, li {
-      margin: 20px;
+    /* Dropdown styling */
+    .dropdown {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: none;
     }
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website Title</title>
 
-    
+    .dropdown-header {
+      padding: 0px;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5 em;
+      font-weight: bold;
+      margin-bottom: 10px; /* Add spacing below the header */
+      color: #4a4a4a; 
+    }
+
+    .dropdown-header:hover {
+      background-color: transparent;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding: 15px 0;
+      border-top: transparent;
+      background-color: transparent;
+    }
+
+    .icon {
+      transition: transform 0.2s;
+    }
+
+    .icon.rotate {
+      transform: rotate(180deg);
+    }
+
+    a {
+      color: #d400ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+   /* Main content styling */
+   main {
+      width: 75%;
+      margin-left: 10%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #north-star {
+    margin-bottom: 40px; /* Adjust the space below "North Star" */
+    }
+
+  .dropdown {
+  margin-top: 20px; /* Add space above the dropdown (optional, if needed) */
+  } 
+
+  #contact {
+  margin-top: 40px; /* Space above the "Contact Me" section */
+}
+
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <aside>
-    <h1>Quinn. </h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#passions">Passions</a></li>
-        <li><a href="#dreams">Dreams</a></li>
-        <li><a href="#north-star">My North Star</a></li>
-        <li><a href="#why-i-moved">Why I Moved</a></li>
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#favourite-books">Favourite Books</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <footer>
-      <p>© 2024 Quinn Liu</p>
-    </footer>
-  </aside>
-
   <!-- Main Content -->
   <main>
     <section id="about">
-      <h2>About Me😁 </h2>
-      <p>Hi, I'm Quinn. I am passionate about using tech to solve real, industry problems.</p>
+      <h2>About Me 😁</h2>
+      <p>Hi, I'm Quinn. I am passionate about using frontier technologies to solve real, industry problems.</p>
       <p>I can help with two things:</p>
       <ul>
         <li>Affordable and tailored supply chain (e.g., I helped BrainCo make robotics classrooms)</li>
@@ -180,7 +136,7 @@ aside footer {
     </section>
 
     <section id="passions">
-      <h2>Passions🌟</h2>
+      <h2>Passions 🌿</h2>
       <ul>
         <li>Making legal services accessible</li>
         <li>Building domain specific LLMs</li>
@@ -189,121 +145,149 @@ aside footer {
     </section>
 
     <section id="dreams">
-      <h2>Dreams🌿</h2>
+      <h2>Dreams 💭</h2>
       <ul>
-        <li>Creating a new way of work</li>
+        <li>Building a new way of work</li>
         <li>Empowering 10 women to build 10 things that shape our future</li>
-        <li>Starting a fund to invest in technology that changes the way we work forever</li>
+        <li>Starting a fund to invest in AGI that changes the way we work forever</li>
       </ul>
     </section>
 
     <section id="north-star">
-      <h2>My North Star💫</h2>
+      <h2>My North Star 🌟</h2>
       <p>Impact, belonging, and growth.</p>
     </section>
 
-<div class="dropdown">
-  <div class="dropdown-header" onclick="toggleDropdown(this)">
-    <span>Thesis for Startup Building 🧑‍💻</span>
-    <span class="icon">▼</span>
+  <div class="dropdown">
+    <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>Why I Moved ✈️</span>
+      <span class="icon">↵</span>
+    </div>
+    <div class="dropdown-content">
+
+      <!-- Content for "Why I Moved" -->
+      <p>I landed at Hong Kong International Airport at 5 a.m., lugging five jars of peanut butter, a rice cooker, a coffee machine, a sleeping bag, and five suitcases packed with things I thought I’d desperately need. I thought I needed these things to survive, as if the bustling heart of Asia couldn’t provide. I was 22, naive, and brimming with excitement for what felt like the start of everything.
+        <p>Julie, my law school friend, and I spent that first day at IKEA, pulling together a home from secondhand furniture. We slept on the floor for two weeks because we didn’t have a local phone number to get deliveries. But I didn’t care. This was my big move. I had it all planned: build my career in Hong Kong, climb the ladder, and eventually make partner. Maybe one day, I’d end up in New York. Everything felt possible.</p>
+        <p>Hong Kong felt like the perfect place for me. Coming from Sydney, I was tired of feeling like an exception—the “Asian girl” in predominantly white spaces. In Hong Kong, there was no bamboo ceiling, no glass ceiling. It was refreshing to be just one of many ambitious, driven women. For the first time, I felt like I belonged somewhere.</p>
+        
+        <p>I threw myself into building a life. My first apartment was in a quiet neighborhood by the sea—far from the hustle and chaos of Central. It reminded me of Sydney: the breeze, the ocean, the families raising kids. I filled it with Taobao treasures, soft carpets, and little decorations that made it feel like home. I even got a cat. Life was good. I thought I’d stay forever.
+        
+        <p> Then I moved to Central. My new apartment was sleek and modern, with a balcony overlooking the city. It was everything I thought I wanted—a short commute to work, a buzzing social scene, and constant energy. I had so many friends. Too many, honestly. I was always surrounded by people: 40 of us crammed into an apartment celebrating a birthday, a housewarming, a promotion, or someone’s admission to practice law. My calendar was always full, my life looked enviable from the outside, but inside? I felt empty. Lonely, even. I couldn’t put my finger on why.
+        
+         <p>I poured myself into travel, hoping it would fill the void. Over two years, I visited more than 20 countries. From breathtaking landscapes to bustling cities, I tried to lose myself in new experiences. But as privileged as this sounds, even that didn’t help. The hollow feeling was still there. I was chasing something, but I didn’t know what.
+        
+         <p>Work wasn’t helping either. I had picked funds formation—a niche area of law—because it gave me the mobility to work anywhere in the world. It was practical. I even passed the New York Bar while working full-time, studying during stolen hours between midnight and dawn. I’d stay up from 12 a.m. to 5 a.m., study until my brain felt fried, then head to work, catch a few hours of sleep, and repeat. It was exhausting, but I thought it was worth it. I had convinced myself that New York was the next logical step.
+        
+        <p>But as time went on, I started to realize I didn’t care about the things I was supposed to care about. My colleagues were brilliant, hardworking, and detail-oriented—everything I thought I admired. But I couldn’t bring myself to care about perfect formatting, the debate between “keep track of” and “keep track with,” or reading the same fee proposal five times. The work felt transactional and detached. I wanted to create something meaningful, but I didn’t know how to make that happen.
+        
+        <p>After four years, I decided to leave Hong Kong. I went down a list of cities in the world I thought I'd live: London (got a job there but hate the weather), Tokyo (my Japanese is BAD), New York (feels just like another Hong Kong), Bali (but what would I even do there?). I chose San Francisco, because I thought I'd like the meritocracy. This time, the move felt different. When I landed in Hong Kong, I thought it was where I belonged. When I arrived in San Francisco, I knew it was.</p>
+        <p>San Francisco has a way of humbling you. It’s a city full of people who don’t just think outside the box—they shatter it entirely. I thrive here because I love being the dumbest person in the room. Every conversation challenges me to think bigger, learn more, and grow faster. It’s terrifying, exhilarating, and exactly what I needed.</p>
+        <p>Moving across three continents in five years taught me a lot—about life, about people, and about myself.</p>
+        <p>What I’ve Learned</p>
+            <ul>
+        <li>Only change and yourself are permanent. Everything else is fleeting.
+            Each city left its mark on me, but none stayed the same. Neither did I. The peanut-butter-loving 22-year-old who landed in Hong Kong isn’t the same person writing this today. I’ve learned to let go and embrace the impermanence of life.
+        </li>
+        <li>Life is an accumulation of choices. You can always choose.
+            Moving to Hong Kong was a choice. Staying was a choice. Leaving was, too. Even when I felt stuck, I reminded myself that every day, I was making choices—whether I realized it or not. That realization was liberating.
+        </li>
+        <li>Belonging isn’t about a place—it’s about a purpose. In Hong Kong, I searched for belonging in my heritage, my career, and my surroundings. In San Francisco, I learned that belonging comes from being aligned with your purpose and being unapologetically yourself.
+        </li>
+        <li>Success is fluid. Define it on your own terms. For years, I believed success meant titles, salary, and recognition. But San Francisco showed me that success is about growth, impact, and joy.
+        </li>
+            </ul>
+            <p>Looking back, my journey wasn’t just about moving from Sydney to Hong Kong to San Francisco. It was about becoming. Each move was a shedding of one version of myself and the beginning of another. It wasn’t always easy. I doubted myself, stumbled, and grieved the lives I left behind. But every step brought me closer to the person I am today: someone who values adventure over certainty, purpose over prestige, and growth over comfort.</p>
+         <p>I don’t know where I’ll go next. Maybe back to Sydney, maybe somewhere completely new. Or maybe I’ll finally put down roots. But wherever I end up, I’ll carry these lessons with me. And I’ll keep choosing, keep growing, and keep chasing that elusive, exhilarating feeling of belonging—not to a place, but to myself.</p>
+            </section>
+    </div>
   </div>
-  <div class="dropdown-content">
-    <p> My thesis for startup building is all about using technology to create a better way of work. Having spent years in law and capital markets, I’ve seen firsthand how outdated processes and inefficiencies hold people back. I’m passionate about solving those problems by building tools that streamline workflows, foster collaboration, and let professionals focus on the work that really matters.
-    </p>
+
+  <div class="dropdown">
+    <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>Purpose 📍</span>
+      <span class="icon">↵</span>
+    </div>
+    <div class="dropdown-content">
+      <!-- Content for "Purpose" -->
+      <p>To take control of your life, I believe you need to do regular life audits—pausing to ask yourself hard questions about where you are and where you’re going. For me, this process revolves around three key principles: coherence, direction, and significance. Is what I’m doing aligned with who I truly am, at my core? Does it reflect my values, my identity, and the things I care about? Does it take me closer to where I want to be in the future, or am I stuck in patterns that lead nowhere? And perhaps most importantly, is what I’m doing meaningful—not just in the sense of personal satisfaction, but in a way that resonates beyond myself, adding value to others and to the world?</p>
+      <p>I think life gains its meaning from how well these three elements—coherence, direction, and significance—interact with each other. Coherence gives you the inner peace that comes from knowing your actions reflect your authentic self. Direction gives you the motivation to keep moving forward, even when the path is hard. And significance connects you to something bigger than yourself, reminding you that your efforts matter in the grander scheme of things.</p>
+      <p>Without coherence, you feel lost. Without direction, you feel stagnant. And without significance, you feel hollow. But when all three are present, life feels purposeful, even in its challenges. It’s not about perfection—it’s about living intentionally, in a way that reflects what’s most important to you.</p>
+    </div>
   </div>
-</div>
-    
-    <section id="why-i-moved">
-    <h2>Why I Moved✈️✈ </h2>
-    <p>I landed at Hong Kong International Airport at 5 a.m. from Sydney, lugging five jars of peanut butter, a rice cooker, three pots, a coffee machine, a sleeping bag, and three suitcases packed with things I thought I’d desperately need. Looking back, I have no idea why my 22-year-old brain thought those things would be hard to find in Hong Kong. But there I was—young, excited, and ridiculously overprepared, ready to start a new chapter in a city that felt like the center of the world.
-<p>Julie, my law school friend and I spent that first day at IKEA pulling together a home from secondhand furniture. We slept on the floor on cardboards for two weeks because we didn’t have a local phone number to get deliveries. But I didn't care. This was it. I was in the centre of Asia. I’d make partner at a top law firm, build a life here, and maybe, someday, move to New York to become a big-shot lawyer. It felt like I had a roadmap for my entire life. Everything felt possible. </p>
-<p>Hong Kong felt like freedom. For the first time, I wasn’t an outsider. I was surrounded by people who looked like me—no glass ceilings, no bamboo ceilings. For the first time, I felt like I belonged somewhere.</p>
 
-<p>I threw myself into building a life. My first apartment was in a quiet neighborhood by the sea—far from the hustle and chaos of Central. It reminded me of home: the breeze, the ocean, the families raising kids. I filled it with Taobao treasures, soft carpets, and little decorations that made it feel like home. I even got a cat. Life was good. I thought I’d stay forever.
-
-<p> Then I moved to the centre of the city. My new apartment was amazing, with a balcony overlooking the city. I had so many friends. Too many, honestly. I was always surrounded by people: 40 of us crammed into an apartment celebrating a birthday, a housewarming, a promotion, or someone’s admission to practice law. My calendar was always full, my life looked enviable from the outside. But I felt empty. Lonely, even. I couldn’t put my finger on why.
-
- <p>I poured myself into meeting new people and new experiences, hoping it would fill the void. Over two years, I visited more than 20 countries. From nature to cities, I tried to lose myself in new experiences. But as privileged as this sounds, even that didn’t help. The hollow feeling was still there. I was chasing something, but I didn’t know what.
-
- <p>Work wasn’t helping either. I had picked funds formation—a niche area of law—because it gave me the mobility to work anywhere in the world. I was not passionate about it and had to fight to get there, but it was practical. I even passed the New York Bar, my third license to practise law, while working full-time, studying during stolen hours between midnight and dawn. I’d stay up from 12 a.m. to 5 a.m., study until my brain felt fried, then head to work, catch a few hours of sleep, and repeat. It was exhausting, but I thought it was worth it. I had convinced myself that New York was the next logical step.
-
-<p>But as time went on, I started to realize I didn’t care about the things I was supposed to care about. My colleagues were brilliant, hardworking, and detail-oriented—everything I thought I admired. But I couldn’t bring myself to care about perfect formatting, the debate between “keep track of” and “keep track with,” or reading the same fee proposal five times. The work felt transactional and detached. I wanted to create something meaningful, but I didn’t know how to make that happen.
-
-<p>After four years, I decided to leave Hong Kong. I wrote a lits of cities in the world I thought I'd live in and tried them all - Tokyo, London, Taipei, Beijing, New York - and finally arrived at San Francisco - because of the nature and most importantly, the people. This time, the move felt different. When I landed in Hong Kong, I thought it was where I belonged. When I arrived in San Francisco, I knew it was.</p>
-<p>San Francisco has a way of humbling you. It’s a city full of people who don’t just think outside the box—they shatter it entirely. I thrive here because I love being the dumbest person in the room. Every conversation challenges me to think bigger, learn more, and grow faster. It’s terrifying, exhilarating, and exactly what I needed.</p>
-<p>Moving across three continents in five years taught me a lot—about life, about people, and about myself.</p>
-<p>What I’ve Learned</p>
-    <ul>
-<li>Only change and yourself are permanent. Everything else is fleeting.
-    Each city left its mark on me, but none stayed the same. Neither did I. The peanut-butter-loving 22-year-old who landed in Hong Kong isn’t the same person writing this today. I’ve learned to let go and embrace the impermanence.
-</li>
-<li>Life is an accumulation of choices. You can always choose.
-    Moving to Hong Kong was a choice. Staying was a choice. Leaving was, too. Even when I felt stuck, I reminded myself that every day, I was making choices—whether I realized it or not. That realization was liberating.
-</li>
-<li>Belonging isn’t about a place—it’s about a purpose. In Hong Kong, I searched for belonging in my heritage, my career, and my surroundings. In San Francisco, I learned that belonging comes from being aligned with your purpose and being unapologetically yourself.
-</li>
-<li>Success is fluid. Define it on your own terms. For years, I believed success meant titles, salary, and recognition. But San Francisco showed me that success is about growth, impact, and joy.
-</li>
-    </ul>
-    <p>Looking back, my journey wasn’t just about moving from Sydney to Hong Kong to San Francisco. It was about becoming. Each move was a shedding of one version of myself and the beginning of another. It wasn’t always easy. I doubted myself, stumbled, and grieved the lives I left behind. But every step brought me closer to the person I am today: someone who values adventure over certainty, purpose over prestige, and growth over comfort.</p>
- <p>I don’t know where I’ll go next. Maybe back to Sydney, maybe somewhere completely new. Or maybe I’ll finally put down roots. But wherever I end up, I’ll carry these lessons with me. And I’ll keep choosing, keep growing, and keep chasing that elusive, exhilarating feeling of belonging—not to a place, but to myself.</p>
-    </section>
-
-    <section id="purpose">
-    <h2>Purpose📍</h2>
-    <p>To take control of your life, I believe you need to do regular life audits—pausing to ask yourself hard questions about where you are and where you’re going. For me, this process revolves around three key principles: coherence, direction, and significance. Is what I’m doing aligned with who I truly am, at my core? Does it reflect my values, my identity, and the things I care about? Does it take me closer to where I want to be in the future, or am I stuck in patterns that lead nowhere? And perhaps most importantly, is what I’m doing meaningful—not just in the sense of personal satisfaction, but in a way that resonates beyond myself, adding value to others and to the world?</p>
-    <p>I think life gains its meaning from how well these three elements—coherence, direction, and significance—interact with each other. Coherence gives you the inner peace that comes from knowing your actions reflect your authentic self. Direction gives you the motivation to keep moving forward, even when the path is hard. And significance connects you to something bigger than yourself, reminding you that your efforts matter in the grander scheme of things.</p>
-    <p>Without coherence, you feel lost. Without direction, you feel stagnant. And without significance, you feel hollow. But when all three are present, life feels purposeful, even in its challenges. It’s not about perfection—it’s about living intentionally, in a way that reflects what’s most important to you.</p>
-        </section>
-
-      <section id="favourite-books">
-    <h2>Favourite Books 📚</h2>
-    <li>Empire of Pain, Patrick Radden Keefe</li>
-    <li>Becoming, Michelle Obama</li>
-    <li>Covenant of Water, Abraham Verghese</li>
-    <li>Three Body Problem, Liu Cixin</li>
-    <li>Project Hail Mary, Andy Weir</li> 
-    <li>Educated, Tara Westover</li>
-    <li>Ego is your Enemy, Ryan Holiday</li>
-    <li>1984, George Orwell</li>
-      </section>
-   
-      <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:quinn.liu.work@gmail.com">quinn.liu.work@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/huanxu-quinn-liu/" target="_blank">https://www.linkedin.com/in/huanxu-quinn-liu/</a></p>
-      <p>Twitter: <a href="https://x.com/quinnliuhx" target="_blank">https://x.com/quinnliuhx</a></p>
-      <p>Substack: <a href="https://qliu.substack.com/" target="_blank">https://qliu.substack.com/</a></p>
-    </section>
-  </main>
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
-  <div class="blur-overlay"></div>
+  <div class="dropdown">
+    <div class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>Favourite Books 📚</span>
+      <span class="icon">↵</span>
+    </div>
+    <div class="dropdown-content">
+      <!-- Content for "Favourite Books" -->
+      <ul>
+        <li>Empire of Pain, Patrick Radden Keefe</li>
+        <li>Becoming, Michelle Obama</li>
+        <li>Covenant of Water, Abraham Verghese</li>
+        <li>Three Body Problem, Liu Cixin</li>
+        <li>Project Hail Mary, Andy Weir</li>
+        <li>Educated, Tara Westover</li>
+        <li>Ego is your Enemy, Ryan Holiday</li>
+        <li>1984, George Orwell</li>
+      </ul>
+    </div>
+  </div>
 
   <script>
-    const cursor = document.querySelector('.custom-cursor');
-    const blurOverlay = document.querySelector('.blur-overlay');
-
-    // Update cursor position on mouse move
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-
-      // Update blur overlay position
-      blurOverlay.style.clipPath = `circle(10px at ${e.clientX}px ${e.clientY}px)`;
-    });
-
-    // Add active state on hover for links
-    document.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('mouseover', () => {
-        cursor.classList.add('active');
-        blurOverlay.style.clipPath = `circle(20px at ${cursor.style.left} ${cursor.style.top})`;
-      });
-      link.addEventListener('mouseout', () => {
-        cursor.classList.remove('active');
-        blurOverlay.style.clipPath = `circle(10px at ${cursor.style.left} ${cursor.style.top})`;
-      });
-    });
+    function toggleDropdown(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.icon');
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.classList.remove('rotate');
+      } else {
+        content.style.display = "block";
+        icon.classList.add('rotate');
+      }
+    }
   </script>
 </body>
 </html>
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:quinn.liu.work@gmail.com">quinn.liu.work@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/huanxu-quinn-liu/" target="_blank">https://www.linkedin.com/in/huanxu-quinn-liu/</a></p>
+  <p>Twitter: <a href="https://x.com/quinnliuhx" target="_blank">https://x.com/quinnliuhx</a></p>
+</section>
+</main>
+<!-- Custom Cursor -->
+<div class="custom-cursor"></div>
+<div class="blur-overlay"></div>
+
+<script>
+const cursor = document.querySelector('.custom-cursor');
+const blurOverlay = document.querySelector('.blur-overlay');
+
+// Update cursor position on mouse move
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+
+  // Update blur overlay position
+  blurOverlay.style.clipPath = `circle(10px at ${e.clientX}px ${e.clientY}px)`;
+});
+
+// Add active state on hover for links
+document.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('mouseover', () => {
+    cursor.classList.add('active');
+    blurOverlay.style.clipPath = `circle(20px at ${cursor.style.left} ${cursor.style.top})`;
+  });
+  link.addEventListener('mouseout', () => {
+    cursor.classList.remove('active');
+    blurOverlay.style.clipPath = `circle(10px at ${cursor.style.left} ${cursor.style.top})`;
+  });
+});
+</script>
+</body>
+</html>
+
