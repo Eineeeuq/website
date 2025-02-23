@@ -44,12 +44,29 @@
       top: 0;
       left: 0;
       pointer-events: none;
-      backdrop-filter: blur(1px);
+      backdrop-filter: blur(1.5px);
       clip-path: circle(10px at 0 0);
       transition: clip-path 0.1s ease-out;
       z-index: 999;
     }
 
+#about h2 {
+    text-align: center; /* Center the "About Me" title */
+}
+
+.about-image {
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-bottom: 15px; /* Adds some space below the image */
+}
+
+.about-photo {
+    width: 250px; /* Adjust image size */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover;
+}
+    
     /* Dropdown styling */
     .dropdown {
       margin-top: 20px;
